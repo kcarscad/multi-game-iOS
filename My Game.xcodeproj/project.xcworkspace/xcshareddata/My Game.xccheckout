@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>28844E79-2526-4ADB-9145-94B129A2BE85</string>
+	<string>7D077CE7-11DA-4F46-9E51-B1D5483A229F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>My Game</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9541534A-0909-4CEF-8522-D37B201733A3</key>
-		<string>https://github.com/kcarscad/multi-game.git</string>
+		<key>E75B244C-EDCD-4180-A72A-2486E4C3104A</key>
+		<string>https://github.com/kcarscad/Multi-Game.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>My Game.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9541534A-0909-4CEF-8522-D37B201733A3</key>
+		<key>E75B244C-EDCD-4180-A72A-2486E4C3104A</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/kcarscad/multi-game.git</string>
+	<string>https://github.com/kcarscad/Multi-Game.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9541534A-0909-4CEF-8522-D37B201733A3</string>
+	<string>E75B244C-EDCD-4180-A72A-2486E4C3104A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9541534A-0909-4CEF-8522-D37B201733A3</string>
+			<string>E75B244C-EDCD-4180-A72A-2486E4C3104A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>multi-game</string>
+			<string>Multi-Game</string>
 		</dict>
 	</array>
 </dict>
