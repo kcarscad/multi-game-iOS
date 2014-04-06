@@ -9,7 +9,7 @@
 #import "KC2048Scene.h"
 #import "KCMenuScene.h"
 
-const CGFloat DURATION = 0.2;
+const CGFloat DURATION = 0.15;
 
 @interface KC2048Scene()
 
@@ -29,7 +29,7 @@ const CGFloat DURATION = 0.2;
     CGPoint startPos,endPos;
     NSArray *boxes;
     NSMutableArray *nodesOnScreen;
-    bool occupiedBoxes[4][4], running, popupActionDone;
+    bool occupiedBoxes[4][4], running, doneAdding, popupActionDone;
     NSMutableDictionary *boxColors;
     SKLabelNode *scoreNode;
     int score;
@@ -47,7 +47,7 @@ const CGFloat DURATION = 0.2;
         // @[x, y, box, label]
         nodesOnScreen = [NSMutableArray array];
         score = 0;
-        popupActionDone = false;
+        popupActionDone = doneAdding = false;
         running = true;
         
 		scoreNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-Medium"];
@@ -524,7 +524,6 @@ const CGFloat DURATION = 0.2;
             temp1.fontSize = mainLabel.fontSize;
             temp1.text = mainLabel.text;
             mainLabel.fontSize = 34.0;
-            NSLog(@"%f %f",temp1.frame.size.height,mainLabel.frame.size.height);
             [mainLabel setPosition:CGPointMake(mainLabel.position.x, mainLabel.position.y - temp1.frame.size.height/4.0 + mainLabel.frame.size.height/4.0 + 2)];
         }
         
@@ -588,58 +587,69 @@ const CGFloat DURATION = 0.2;
     
     endPos = [[[event allTouches]anyObject] locationInView:self.view];
     
-    if (running){
-        
-        if ([self updateBoxes]){
-            running=false;
+    if (running && doneAdding)
+        if ([self updateBoxes])
             [self createNewBox];
+    
+    [self runAction:[SKAction sequence:@[[SKAction waitForDuration:DURATION*1.2],[SKAction runBlock:^{
+        if ([nodesOnScreen count]==16 && [self stuck]){
+            running = false;
+            [self gameOver];
         }
-        
-        if ([nodesOnScreen count]==16)
-            if ([self stuck])
-                [self gameOver];
-        
-    }
+    }]]]];
     
 }
 
 -(void)gameOver{
     
-    running = false;
-    
-    SKSpriteNode *fadeOut = [[SKSpriteNode alloc]init];
-    [fadeOut setSize:CGSizeMake(self.frame.size.width,self.frame.size.height)];
-    [fadeOut setPosition:CGPointMake(self.frame.size.width/2.0,self.frame.size.height/2.0)];
-    [fadeOut setColor:[SKColor blackColor]];
-    [fadeOut setAlpha:0.0];
-    [self addChild:fadeOut];
-    
-    [fadeOut runAction:[SKAction fadeAlphaTo:0.7 duration:0.5]];
-    
-    [scoreNode runAction:[SKAction sequence:@[[SKAction fadeOutWithDuration:0.5],
-                                                   [SKAction removeFromParent]]]];
-    
-    SKLabelNode *finalScoreNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-Medium"];
-    finalScoreNode.text = [NSString stringWithFormat:@"Score: %d",score];
-    finalScoreNode.fontSize = 50;
-    finalScoreNode.fontColor = [SKColor whiteColor];
-    finalScoreNode.position = CGPointMake(self.frame.size.width/2.0, 4*self.frame.size.height/5.0);
-    [finalScoreNode setScale:8.0];
-    finalScoreNode.alpha = 0.0;
-    
-    [self addChild:finalScoreNode];
-    
-    // set the action for each node
-    SKAction *action = [SKAction sequence:@[[SKAction sequence:@[[SKAction waitForDuration:0.5],
-                                                                 [SKAction group:@[[SKAction fadeInWithDuration:0.5],
-                                                                                   [SKAction scaleTo:1.0 duration:0.8]]]]],
-                                            [SKAction runBlock:^(void){popupActionDone=true;}]]];
-    
-    [finalScoreNode runAction:action];
+    [self runAction:[SKAction sequence:@[[SKAction waitForDuration:DURATION*2],[SKAction runBlock:^{
+        
+        SKSpriteNode *fadeOut = [[SKSpriteNode alloc]init];
+        [fadeOut setSize:CGSizeMake(self.frame.size.width,self.frame.size.height)];
+        [fadeOut setPosition:CGPointMake(self.frame.size.width/2.0,self.frame.size.height/2.0)];
+        [fadeOut setColor:[SKColor blackColor]];
+        [fadeOut setAlpha:0.0];
+        [self addChild:fadeOut];
+        
+        [fadeOut runAction:[SKAction fadeAlphaTo:0.7 duration:0.5]];
+        
+        [scoreNode runAction:[SKAction sequence:@[[SKAction fadeOutWithDuration:0.5],[SKAction removeFromParent]]]];
+        
+        SKLabelNode *finalScoreNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-Medium"];
+        finalScoreNode.text = [NSString stringWithFormat:@"Score: %d",score];
+        finalScoreNode.fontSize = 45;
+        finalScoreNode.fontColor = [SKColor whiteColor];
+        finalScoreNode.position = CGPointMake(self.frame.size.width/2.0, 7*self.frame.size.height/10.0);
+        [finalScoreNode setScale:8.0];
+        finalScoreNode.alpha = 0.0;
+        
+        [self addChild:finalScoreNode];
+        
+        // set the action for each node
+        SKAction *action = [SKAction sequence:@[[SKAction sequence:@[[SKAction waitForDuration:0.5],
+                                                                     [SKAction group:@[[SKAction fadeInWithDuration:0.5],
+                                                                                       [SKAction scaleTo:1.0 duration:0.8]]]]],
+                                                [SKAction runBlock:^(void){popupActionDone=true;}]]];
+        
+        [finalScoreNode runAction:action];
+        
+    }]]]];
     
 }
 
--(bool)stuck{
+-(bool)stuck {
+    
+    // try all combinations of boxes, see if any can combine
+    for (NSArray *one in nodesOnScreen)
+        for (NSArray *two in nodesOnScreen)
+            if (![one isEqual:two])
+                if (([one[0] intValue] == [two[0] intValue] && ([one[1] intValue] + 1 == [two[1] intValue] || [one[1] intValue] - 1 == [two[1] intValue])) ||
+                    ([one[1] intValue] == [two[1] intValue] && ([one[0] intValue] + 1 == [two[0] intValue] || [one[0] intValue] - 1 == [two[0] intValue])))
+                    if ([((SKLabelNode *)one[3]).text isEqualToString:((SKLabelNode *)two[3]).text]){
+                        NSLog(@"(%d,%d) & (%d,%d)",[one[0] intValue],[one[1] intValue],[two[0] intValue],[two[1] intValue]);
+                        NSLog(@"%@ == %@",((SKLabelNode *)one[3]).text,((SKLabelNode *)two[3]).text);
+                        return 0;
+                    }
     
     return 1;
     
@@ -652,6 +662,7 @@ const CGFloat DURATION = 0.2;
 -(void)createNewBox{
     
     int x,y;
+    doneAdding = false;
     
     // get coords that aren't taken
     do {
@@ -711,7 +722,7 @@ const CGFloat DURATION = 0.2;
         [self runAction:[SKAction sequence:@[[SKAction waitForDuration:DURATION],[SKAction runBlock:^{
             [self addChild:box];
             [self addChild:label];
-            running=true;
+            doneAdding = true;
         }]]]];
         
         return @[box,label];
