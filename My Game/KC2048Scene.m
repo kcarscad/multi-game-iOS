@@ -19,10 +19,11 @@ const CGFloat DURATION = 0.15;
 -(int)determineDirection;
 -(bool)updateBoxes;
 -(bool)transitionBoxFrom:(NSArray *)initial to:(NSArray *)final;
+-(bool)stuck;
 -(NSArray *)pt:(int)a :(int)b;
 -(NSArray *)createBox:(NSArray *)point start:(bool)start;
 -(int)combineNumbers:(bool)inXDimension withX:(int)x andY:(int)y andBox1:(NSArray *)box1 andBox2:(NSArray *)box2 andD:(int)d;
--(bool)stuck;
+
 @end
 
 @implementation KC2048Scene{
@@ -43,51 +44,51 @@ const CGFloat DURATION = 0.15;
 		
 		[self setBackgroundColor:[SKColor colorWithRed:(161/255.0) green:(202/255.0) blue:(241/255.0) alpha:1.0]];
         
-        // (x,y) E [0,3]
-        // @[x, y, box, label]
-        nodesOnScreen = [NSMutableArray array];
-        score = 0;
-        popupActionDone = doneAdding = false;
-        running = true;
-        
-		scoreNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-Medium"];
-		scoreNode.text = [NSString stringWithFormat:@"%d",score];
-		scoreNode.fontSize = 28;
-		scoreNode.fontColor = [SKColor whiteColor];
-		scoreNode.position = CGPointMake(self.frame.size.width/2.0, self.frame.size.height - 60);
-		[self addChild:scoreNode];
-        
-        int c = 10;
-        
-        // temporary rgb values
-        int cols[13][3] = {
-            {0,0,0},        // black
-            {255,100,0},    // orange
-            {25,25,112},    // midnight blue
-            {255,20,147},   // deep pink
-            {244,164,96},   // sandy brown
-            {138,43,226},   // blue-violet
-            {255,0,0},      // red
-            {0,128,0},      // green
-            {0,0,255},      // blue
-            {255,105,180},  // hot pink
-            {},
-            {},
-            {}};
-        
-        boxColors = [NSMutableDictionary dictionary];
-        
-        
-        //
-        for (int i=1;i<=c;i++)
-            [boxColors setObject:@[[SKColor colorWithRed:cols[i-1][0]/255.0 green:cols[i-1][1]/255.0 blue:cols[i-1][2]/255.0 alpha:1.0],[NSNumber numberWithInt:cols[i-1][0]],[NSNumber numberWithInt:cols[i-1][1]],[NSNumber numberWithInt:cols[i-1][2]]] forKey:[NSString stringWithFormat:@"%d",(int)pow(2,i)]];
-        
-        // reset occupiedBoxes
-        for (int a=0;a<4;a++)
-            for (int b=0;b<4;b++)
-                occupiedBoxes[a][b]=0;
-        
-        [self createBase];
+	        // (x,y) E [0,3]
+	        // @[x, y, box, label]
+	        nodesOnScreen = [NSMutableArray array];
+	        score = 0;
+	        popupActionDone = doneAdding = false;
+	        running = true;
+	        
+			scoreNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-Medium"];
+			scoreNode.text = [NSString stringWithFormat:@"%d",score];
+			scoreNode.fontSize = 28;
+			scoreNode.fontColor = [SKColor whiteColor];
+			scoreNode.position = CGPointMake(self.frame.size.width/2.0, self.frame.size.height - 60);
+			[self addChild:scoreNode];
+	        
+	        int c = 10;
+	        
+	        // temporary rgb values
+	        int cols[13][3] = {
+	            {0,0,0},        // black
+	            {255,100,0},    // orange
+	            {25,25,112},    // midnight blue
+	            {255,20,147},   // deep pink
+	            {244,164,96},   // sandy brown
+	            {138,43,226},   // blue-violet
+	            {255,0,0},      // red
+	            {0,128,0},      // green
+	            {0,0,255},      // blue
+	            {255,105,180},  // hot pink
+	            {},
+	            {},
+	            {}};
+	        
+	        boxColors = [NSMutableDictionary dictionary];
+	        
+	        
+	        //
+	        for (int i=1;i<=c;i++)
+	            [boxColors setObject:@[[SKColor colorWithRed:cols[i-1][0]/255.0 green:cols[i-1][1]/255.0 blue:cols[i-1][2]/255.0 alpha:1.0],[NSNumber numberWithInt:cols[i-1][0]],[NSNumber numberWithInt:cols[i-1][1]],[NSNumber numberWithInt:cols[i-1][2]]] forKey:[NSString stringWithFormat:@"%d",(int)pow(2,i)]];
+	        
+	        // reset occupiedBoxes
+	        for (int a=0;a<4;a++)
+	            for (int b=0;b<4;b++)
+	                occupiedBoxes[a][b]=0;
+	        
+	        [self createBase];
         
 	}
 	
