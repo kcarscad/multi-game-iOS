@@ -244,7 +244,7 @@ static const uint32_t otherCategory = 0x1 << 1;
                 // every 15 balls, decrease interval, increase gravity
                 if (c%15==0){
                     BETWEENOBSTACLES -= 15;
-                    [self.physicsWorld setGravity:CGVectorMake(0.0, self.physicsWorld.gravity.dy-0.1)];
+                    [self.physicsWorld setGravity:CGVectorMake(0.0, self.physicsWorld.gravity.dy-0.5)];
                     c=0;
                 }
                 if (BETWEENOBSTACLES <= 100.0) changing=false;

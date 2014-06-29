@@ -620,7 +620,7 @@ const CGFloat DURATION = 0.15;
         finalScoreNode.text = [NSString stringWithFormat:@"Score: %d",score];
         finalScoreNode.fontSize = 45;
         finalScoreNode.fontColor = [SKColor whiteColor];
-        finalScoreNode.position = CGPointMake(self.frame.size.width/2.0, 7*self.frame.size.height/10.0);
+        finalScoreNode.position = CGPointMake(self.frame.size.width/2.0, 15*self.frame.size.height/20.0);
         [finalScoreNode setScale:8.0];
         finalScoreNode.alpha = 0.0;
         
@@ -646,11 +646,8 @@ const CGFloat DURATION = 0.15;
             if (![one isEqual:two])
                 if (([one[0] intValue] == [two[0] intValue] && ([one[1] intValue] + 1 == [two[1] intValue] || [one[1] intValue] - 1 == [two[1] intValue])) ||
                     ([one[1] intValue] == [two[1] intValue] && ([one[0] intValue] + 1 == [two[0] intValue] || [one[0] intValue] - 1 == [two[0] intValue])))
-                    if ([((SKLabelNode *)one[3]).text isEqualToString:((SKLabelNode *)two[3]).text]){
-                        NSLog(@"(%d,%d) & (%d,%d)",[one[0] intValue],[one[1] intValue],[two[0] intValue],[two[1] intValue]);
-                        NSLog(@"%@ == %@",((SKLabelNode *)one[3]).text,((SKLabelNode *)two[3]).text);
+                    if ([((SKLabelNode *)one[3]).text isEqualToString:((SKLabelNode *)two[3]).text])
                         return 0;
-                    }
     
     return 1;
     
