@@ -7,26 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53017E7118A7D5A700258B0F /* KCFlappyGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 53017E7018A7D5A700258B0F /* KCFlappyGameScene.m */; };
-		53017E7618A7F4CE00258B0F /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 53017E7518A7F4CE00258B0F /* circle.png */; };
-		5338D48418E6421700397770 /* KC2048Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 5338D48318E6421700397770 /* KC2048Scene.m */; };
 		535D1ADA18A70D7B007B9C06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D1AD918A70D7B007B9C06 /* Foundation.framework */; };
 		535D1ADC18A70D7B007B9C06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D1ADB18A70D7B007B9C06 /* CoreGraphics.framework */; };
 		535D1ADE18A70D7B007B9C06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D1ADD18A70D7B007B9C06 /* UIKit.framework */; };
 		535D1AE018A70D7B007B9C06 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D1ADF18A70D7B007B9C06 /* SpriteKit.framework */; };
-		535D1AE618A70D7B007B9C06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 535D1AE418A70D7B007B9C06 /* InfoPlist.strings */; };
-		535D1AE818A70D7B007B9C06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 535D1AE718A70D7B007B9C06 /* main.m */; };
-		535D1AEC18A70D7B007B9C06 /* KCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 535D1AEB18A70D7B007B9C06 /* KCAppDelegate.m */; };
-		535D1AEF18A70D7B007B9C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 535D1AED18A70D7B007B9C06 /* Main.storyboard */; };
-		535D1AF218A70D7B007B9C06 /* KCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 535D1AF118A70D7B007B9C06 /* KCViewController.m */; };
-		535D1AF518A70D7B007B9C06 /* KCMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 535D1AF418A70D7B007B9C06 /* KCMenuScene.m */; };
-		535D1AF918A70D7B007B9C06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 535D1AF818A70D7B007B9C06 /* Images.xcassets */; };
 		535D1B0018A70D7B007B9C06 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D1AFF18A70D7B007B9C06 /* XCTest.framework */; };
 		535D1B0118A70D7B007B9C06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D1AD918A70D7B007B9C06 /* Foundation.framework */; };
 		535D1B0218A70D7B007B9C06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535D1ADD18A70D7B007B9C06 /* UIKit.framework */; };
-		539FFA6518C9160300C3BDC1 /* KCFallScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 539FFA6418C9160300C3BDC1 /* KCFallScene.m */; };
-		53C9192618A732A800A4D04C /* KCMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C9192518A732A800A4D04C /* KCMenuButton.m */; };
-		53EF9A8218BA49C600512BE8 /* base.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EF9A8118BA49C600512BE8 /* base.png */; };
+		772964EB1965EC5700CE2966 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 772964D31965EC5700CE2966 /* Main.storyboard */; };
+		772964EC1965EC5700CE2966 /* base.png in Resources */ = {isa = PBXBuildFile; fileRef = 772964D51965EC5700CE2966 /* base.png */; };
+		772964ED1965EC5700CE2966 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 772964D61965EC5700CE2966 /* circle.png */; };
+		772964EE1965EC5700CE2966 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 772964D71965EC5700CE2966 /* InfoPlist.strings */; };
+		772964EF1965EC5700CE2966 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 772964D91965EC5700CE2966 /* Images.xcassets */; };
+		772964F01965EC5700CE2966 /* KC2048Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964DB1965EC5700CE2966 /* KC2048Scene.m */; };
+		772964F11965EC5700CE2966 /* KCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964DD1965EC5700CE2966 /* KCAppDelegate.m */; };
+		772964F21965EC5700CE2966 /* KCFallScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964DF1965EC5700CE2966 /* KCFallScene.m */; };
+		772964F31965EC5700CE2966 /* KCFlappyGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964E11965EC5700CE2966 /* KCFlappyGameScene.m */; };
+		772964F41965EC5700CE2966 /* KCMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964E31965EC5700CE2966 /* KCMenuButton.m */; };
+		772964F51965EC5700CE2966 /* KCMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964E51965EC5700CE2966 /* KCMenuScene.m */; };
+		772964F61965EC5700CE2966 /* KCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964E71965EC5700CE2966 /* KCViewController.m */; };
+		772964F71965EC5700CE2966 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 772964E81965EC5700CE2966 /* main.m */; };
+		772964F81965EC5700CE2966 /* My Game-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 772964E91965EC5700CE2966 /* My Game-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,35 +41,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		53017E6F18A7D5A700258B0F /* KCFlappyGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCFlappyGameScene.h; sourceTree = "<group>"; };
-		53017E7018A7D5A700258B0F /* KCFlappyGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCFlappyGameScene.m; sourceTree = "<group>"; };
-		53017E7518A7F4CE00258B0F /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
-		5338D48218E6421700397770 /* KC2048Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KC2048Scene.h; sourceTree = "<group>"; };
-		5338D48318E6421700397770 /* KC2048Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KC2048Scene.m; sourceTree = "<group>"; };
 		535D1AD618A70D7B007B9C06 /* My Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535D1AD918A70D7B007B9C06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		535D1ADB18A70D7B007B9C06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		535D1ADD18A70D7B007B9C06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		535D1ADF18A70D7B007B9C06 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		535D1AE318A70D7B007B9C06 /* My Game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "My Game-Info.plist"; sourceTree = "<group>"; };
-		535D1AE518A70D7B007B9C06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		535D1AE718A70D7B007B9C06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		535D1AE918A70D7B007B9C06 /* My Game-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My Game-Prefix.pch"; sourceTree = "<group>"; };
-		535D1AEA18A70D7B007B9C06 /* KCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCAppDelegate.h; sourceTree = "<group>"; };
-		535D1AEB18A70D7B007B9C06 /* KCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCAppDelegate.m; sourceTree = "<group>"; usesTabs = 1; };
-		535D1AEE18A70D7B007B9C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		535D1AF018A70D7B007B9C06 /* KCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCViewController.h; sourceTree = "<group>"; };
-		535D1AF118A70D7B007B9C06 /* KCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCViewController.m; sourceTree = "<group>"; };
-		535D1AF318A70D7B007B9C06 /* KCMenuScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCMenuScene.h; sourceTree = "<group>"; };
-		535D1AF418A70D7B007B9C06 /* KCMenuScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCMenuScene.m; sourceTree = "<group>"; };
-		535D1AF818A70D7B007B9C06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		535D1AFE18A70D7B007B9C06 /* My GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		535D1AFF18A70D7B007B9C06 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		539FFA6318C9160300C3BDC1 /* KCFallScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCFallScene.h; sourceTree = "<group>"; };
-		539FFA6418C9160300C3BDC1 /* KCFallScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCFallScene.m; sourceTree = "<group>"; };
-		53C9192418A732A800A4D04C /* KCMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMenuButton.h; sourceTree = "<group>"; };
-		53C9192518A732A800A4D04C /* KCMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMenuButton.m; sourceTree = "<group>"; };
-		53EF9A8118BA49C600512BE8 /* base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base.png; sourceTree = "<group>"; };
+		772964D41965EC5700CE2966 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		772964D51965EC5700CE2966 /* base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = base.png; sourceTree = "<group>"; };
+		772964D61965EC5700CE2966 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		772964D81965EC5700CE2966 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		772964D91965EC5700CE2966 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		772964DA1965EC5700CE2966 /* KC2048Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KC2048Scene.h; sourceTree = "<group>"; };
+		772964DB1965EC5700CE2966 /* KC2048Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KC2048Scene.m; sourceTree = "<group>"; };
+		772964DC1965EC5700CE2966 /* KCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAppDelegate.h; sourceTree = "<group>"; };
+		772964DD1965EC5700CE2966 /* KCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAppDelegate.m; sourceTree = "<group>"; };
+		772964DE1965EC5700CE2966 /* KCFallScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCFallScene.h; sourceTree = "<group>"; };
+		772964DF1965EC5700CE2966 /* KCFallScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCFallScene.m; sourceTree = "<group>"; };
+		772964E01965EC5700CE2966 /* KCFlappyGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCFlappyGameScene.h; sourceTree = "<group>"; };
+		772964E11965EC5700CE2966 /* KCFlappyGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCFlappyGameScene.m; sourceTree = "<group>"; };
+		772964E21965EC5700CE2966 /* KCMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMenuButton.h; sourceTree = "<group>"; };
+		772964E31965EC5700CE2966 /* KCMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMenuButton.m; sourceTree = "<group>"; };
+		772964E41965EC5700CE2966 /* KCMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMenuScene.h; sourceTree = "<group>"; };
+		772964E51965EC5700CE2966 /* KCMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMenuScene.m; sourceTree = "<group>"; };
+		772964E61965EC5700CE2966 /* KCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCViewController.h; sourceTree = "<group>"; };
+		772964E71965EC5700CE2966 /* KCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCViewController.m; sourceTree = "<group>"; };
+		772964E81965EC5700CE2966 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		772964E91965EC5700CE2966 /* My Game-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "My Game-Info.plist"; sourceTree = "<group>"; };
+		772964EA1965EC5700CE2966 /* My Game-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "My Game-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,19 +97,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53017E7418A7F2EB00258B0F /* files */ = {
-			isa = PBXGroup;
-			children = (
-				53EF9A8118BA49C600512BE8 /* base.png */,
-				53017E7518A7F4CE00258B0F /* circle.png */,
-			);
-			name = files;
-			sourceTree = "<group>";
-		};
 		535D1ACD18A70D7B007B9C06 = {
 			isa = PBXGroup;
 			children = (
-				535D1AE118A70D7B007B9C06 /* My Game */,
+				772964D21965EC5700CE2966 /* My Game */,
 				535D1AD818A70D7B007B9C06 /* Frameworks */,
 				535D1AD718A70D7B007B9C06 /* Products */,
 			);
@@ -135,40 +127,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		535D1AE118A70D7B007B9C06 /* My Game */ = {
+		772964D21965EC5700CE2966 /* My Game */ = {
 			isa = PBXGroup;
 			children = (
-				535D1AF018A70D7B007B9C06 /* KCViewController.h */,
-				535D1AF118A70D7B007B9C06 /* KCViewController.m */,
-				535D1AF318A70D7B007B9C06 /* KCMenuScene.h */,
-				535D1AF418A70D7B007B9C06 /* KCMenuScene.m */,
-				53017E6F18A7D5A700258B0F /* KCFlappyGameScene.h */,
-				53017E7018A7D5A700258B0F /* KCFlappyGameScene.m */,
-				539FFA6318C9160300C3BDC1 /* KCFallScene.h */,
-				539FFA6418C9160300C3BDC1 /* KCFallScene.m */,
-				5338D48218E6421700397770 /* KC2048Scene.h */,
-				5338D48318E6421700397770 /* KC2048Scene.m */,
-				53C9192418A732A800A4D04C /* KCMenuButton.h */,
-				53C9192518A732A800A4D04C /* KCMenuButton.m */,
-				535D1AF818A70D7B007B9C06 /* Images.xcassets */,
-				53017E7418A7F2EB00258B0F /* files */,
-				535D1AE218A70D7B007B9C06 /* Supporting Files */,
-				535D1AED18A70D7B007B9C06 /* Main.storyboard */,
-				535D1AEA18A70D7B007B9C06 /* KCAppDelegate.h */,
-				535D1AEB18A70D7B007B9C06 /* KCAppDelegate.m */,
+				772964D31965EC5700CE2966 /* Main.storyboard */,
+				772964D71965EC5700CE2966 /* InfoPlist.strings */,
+				772964D91965EC5700CE2966 /* Images.xcassets */,
+				772964F91965EC6600CE2966 /* Images */,
+				772964FB1965EC9200CE2966 /* Scenes */,
+				772964DC1965EC5700CE2966 /* KCAppDelegate.h */,
+				772964DD1965EC5700CE2966 /* KCAppDelegate.m */,
+				772964E21965EC5700CE2966 /* KCMenuButton.h */,
+				772964E31965EC5700CE2966 /* KCMenuButton.m */,
+				772964E61965EC5700CE2966 /* KCViewController.h */,
+				772964E71965EC5700CE2966 /* KCViewController.m */,
+				772964E81965EC5700CE2966 /* main.m */,
+				772964E91965EC5700CE2966 /* My Game-Info.plist */,
+				772964EA1965EC5700CE2966 /* My Game-Prefix.pch */,
 			);
 			path = "My Game";
 			sourceTree = "<group>";
 		};
-		535D1AE218A70D7B007B9C06 /* Supporting Files */ = {
+		772964F91965EC6600CE2966 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				535D1AE318A70D7B007B9C06 /* My Game-Info.plist */,
-				535D1AE418A70D7B007B9C06 /* InfoPlist.strings */,
-				535D1AE718A70D7B007B9C06 /* main.m */,
-				535D1AE918A70D7B007B9C06 /* My Game-Prefix.pch */,
+				772964D51965EC5700CE2966 /* base.png */,
+				772964D61965EC5700CE2966 /* circle.png */,
 			);
-			name = "Supporting Files";
+			name = Images;
+			sourceTree = "<group>";
+		};
+		772964FB1965EC9200CE2966 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				772964DA1965EC5700CE2966 /* KC2048Scene.h */,
+				772964DB1965EC5700CE2966 /* KC2048Scene.m */,
+				772964DE1965EC5700CE2966 /* KCFallScene.h */,
+				772964DF1965EC5700CE2966 /* KCFallScene.m */,
+				772964E01965EC5700CE2966 /* KCFlappyGameScene.h */,
+				772964E11965EC5700CE2966 /* KCFlappyGameScene.m */,
+				772964E41965EC5700CE2966 /* KCMenuScene.h */,
+				772964E51965EC5700CE2966 /* KCMenuScene.m */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,11 +252,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				535D1AE618A70D7B007B9C06 /* InfoPlist.strings in Resources */,
-				53EF9A8218BA49C600512BE8 /* base.png in Resources */,
-				535D1AF918A70D7B007B9C06 /* Images.xcassets in Resources */,
-				535D1AEF18A70D7B007B9C06 /* Main.storyboard in Resources */,
-				53017E7618A7F4CE00258B0F /* circle.png in Resources */,
+				772964ED1965EC5700CE2966 /* circle.png in Resources */,
+				772964EF1965EC5700CE2966 /* Images.xcassets in Resources */,
+				772964EE1965EC5700CE2966 /* InfoPlist.strings in Resources */,
+				772964F81965EC5700CE2966 /* My Game-Info.plist in Resources */,
+				772964EC1965EC5700CE2966 /* base.png in Resources */,
+				772964EB1965EC5700CE2966 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,14 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				535D1AF518A70D7B007B9C06 /* KCMenuScene.m in Sources */,
-				535D1AF218A70D7B007B9C06 /* KCViewController.m in Sources */,
-				5338D48418E6421700397770 /* KC2048Scene.m in Sources */,
-				535D1AEC18A70D7B007B9C06 /* KCAppDelegate.m in Sources */,
-				535D1AE818A70D7B007B9C06 /* main.m in Sources */,
-				53017E7118A7D5A700258B0F /* KCFlappyGameScene.m in Sources */,
-				539FFA6518C9160300C3BDC1 /* KCFallScene.m in Sources */,
-				53C9192618A732A800A4D04C /* KCMenuButton.m in Sources */,
+				772964F31965EC5700CE2966 /* KCFlappyGameScene.m in Sources */,
+				772964F11965EC5700CE2966 /* KCAppDelegate.m in Sources */,
+				772964F01965EC5700CE2966 /* KC2048Scene.m in Sources */,
+				772964F21965EC5700CE2966 /* KCFallScene.m in Sources */,
+				772964F41965EC5700CE2966 /* KCMenuButton.m in Sources */,
+				772964F61965EC5700CE2966 /* KCViewController.m in Sources */,
+				772964F71965EC5700CE2966 /* main.m in Sources */,
+				772964F51965EC5700CE2966 /* KCMenuScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,20 +304,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		535D1AE418A70D7B007B9C06 /* InfoPlist.strings */ = {
+		772964D31965EC5700CE2966 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				535D1AE518A70D7B007B9C06 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		535D1AED18A70D7B007B9C06 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				535D1AEE18A70D7B007B9C06 /* Base */,
+				772964D41965EC5700CE2966 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		772964D71965EC5700CE2966 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				772964D81965EC5700CE2966 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
